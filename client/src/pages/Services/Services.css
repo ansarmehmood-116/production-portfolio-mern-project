@@ -1,0 +1,115 @@
+.service-container{
+    padding: 100px 0px;
+    margin: 50px 0px;
+    margin-left: 200px;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+}
+
+  .service-container h2{
+    text-align: center;
+    font-weight: bold;
+    color: #138781;
+  }
+
+  .service-container hr {
+    color: #138781;
+    width: 400px;
+    margin: 10px auto;
+    margin-bottom: 25px;
+  }
+  .skillservice {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .service-content{
+    border-right: 2px solid #138781;
+    padding: 30px;
+    width: 400px;
+    color: #475569;
+  }
+  .service-image img{
+    border-radius: 10px;
+    width: 400px;
+    height: 250px;
+    padding: 30px;
+    background-attachment: fixed;
+    opacity: 0.3;
+    z-index: 0;
+  }
+  .service-image{
+    border-radius: 8px;
+    margin-top: 10px;
+    /* padding: 30px; */
+    z-index: 1;
+  }
+  .service-image :hover{
+    border: 2px solid #138781;
+  }
+
+  #dark .service-image :hover{
+    border: 2px solid #38BDF8;
+  }
+
+  #dark .service-content{
+    border-right: 2px solid #38BDF8;
+    color: #94a3b8;
+  }
+  
+  /* ======== DARK MODE ========= */
+  
+  #dark .service-container {
+    background: #1E293B;
+    border: 1px solid #334155;
+  }
+  
+  #dark .skillservice {
+    color: #94A3B8;
+  }
+
+  #dark .service-container hr {
+    color: #38BDF8;
+  }
+
+  #dark .service-container h2 {
+    color: #38BDF8;
+  }
+  /* ================================ */
+  @media (max-width: 600px) {
+    .service-container {
+      margin: 0;
+      padding: 0;
+      margin-top: 20px;
+      width: 100%;
+    }
+    .service-container h2 {
+      margin-top: 20px;
+    }
+    .service-container hr{
+        display: none;
+    }
+    .skillservice{
+        flex-direction: column;
+    }
+
+    .service-image {
+        order: -1;
+        padding: 20px;
+        margin-top: 5px;
+      }
+
+    .service-image img{
+        padding:0 40px;
+        border-radius: 10px;
+    }
+
+      .service-content {
+        text-align: center;
+        padding: 0 40px;
+        text-align: left;
+      }
+
+  }

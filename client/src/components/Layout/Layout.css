@@ -1,0 +1,67 @@
+.sidebar-section {
+  display: flex;
+  /* background-color: black; */
+  /* border: 10px solid red; */
+  background: #F8FAFC;
+  border-bottom: 1px solid #E2E8F0;
+
+  /* border-bottom: 1px solid #CBD5F5; */
+  /* border-bottom: 1px solid;
+  border-image: linear-gradient(to right, #138781, #0EA5E9) 1; */
+}
+#dark .sidebar-section{
+  background: #0B1120;
+  /* border-bottom: 1px solid #1E293B; */
+  border-bottom: 1px solid #334155;
+}
+
+.sidebar {
+  height: 100vh;
+  /* background-color: #1e1e2c; */
+  background: #F1F5F9;
+  border-right:  1px solid #E2E8F0;
+  width: 90px;
+  position: fixed;
+  overflow-y: scroll;
+  padding-bottom: 20px;
+  /* Chrome, Safari */
+  
+  /* this fixed property has keeped it fixed with whole page while other components are scrolling.If we remove this property then by default it will still remain fixed untill we use relative or absolute position then it will move with other components */
+}
+.sidebar::-webkit-scrollbar {
+  display: none;}
+
+/* .sidebar-section .container{
+    border: 10px solid dodgerblue;
+  } */
+
+.sidebar-toggle {
+  width: 200px;
+}
+.sidebar-toggle-icons {
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  cursor: pointer;
+}
+.sidebar-toggle-icons p svg {
+  /* background-color: #f29f67; */
+  background-color: #138781;
+  color: white;
+  margin-top: 10px;
+}
+
+#dark .sidebar{
+  background: #020617; 
+  border-right: 1px solid #334155;
+}
+
+#dark .sidebar-toggle-icons p svg{
+ background-color:#38BDF8;
+}
+/* ==== MOBILE VIEW ========== */
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+}

@@ -1,0 +1,128 @@
+.about {
+    margin: 30px 0px;
+    padding: 20px;
+    margin-left: 200px;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+    /* goto google and search "css box shadows" and you will get 95 best designs */
+  
+  }
+  
+  /* .about-img {
+    order: 2; /* Move the image to the right
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+  .about-img img {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    /* height: auto; */
+  }
+  
+  .about-content {
+    /* order: 1;
+    flex: 1; */
+    /* padding-right: 30px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* .about-content h1 {
+    color: gray;
+    font-family: cursive;
+    border-bottom: 2px solid gray;
+    text-align: center;
+  } */
+ 
+  /* .about-content p {
+    text-align: justify;
+    padding: 20px;
+  } */
+
+  .about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .about-image img {
+    width: 180px;
+    border-radius: 20%;
+    /* filter: drop-shadow(0 4px 20px rgba(65, 158, 245, 0.922)); */
+    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.15));
+  }
+  .about-image img:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+  }
+  
+  #dark .about-image img {
+    filter: drop-shadow(0 4px 20px rgba(65, 158, 245, 0.922));
+  }
+
+  .about-text {
+    max-width: 600px;
+    /* border: 2px solid red !important; */
+  }
+
+  .about-text h2{
+    margin-left: 20px;
+    color: gray;
+    /* font-family: cursive; */
+    text-decoration: underline;
+    text-align: center;
+  }
+  
+  /* ======== DARK MODE ========= */
+  
+  #dark .about {
+    box-shadow: none;
+    /* background-color: rgba(0, 0, 0, 0.15); */
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+  
+  #dark .about-content h1 {
+    color: #b0a4a4;
+    border-bottom: 2px solid #b0a4a4;
+  }
+  
+  .about-container {
+    padding: 20px;
+  }
+  
+  #dark .about {
+    background: #1E293B;
+    border: 1px solid #334155;
+    color: #94A3B8;
+  }
+  /* ================================ */
+  @media (max-width: 600px) {
+    .about {
+      margin: 0;
+      padding: 0;
+      margin-top: 20px;
+      width: 100%;
+    }
+    .about-content h1 {
+      margin-top: 10px;
+    }
+
+    .about-container {
+      flex-direction: column;
+    }
+  
+    .about-image {
+      order: -1; /* THIS makes image come first */
+    }
+  
+    .about-text {
+      text-align: start;
+    }
+  }

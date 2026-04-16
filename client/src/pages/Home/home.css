@@ -1,0 +1,264 @@
+/* This home container in wrapped in sidebarsection in Layout.js as there is sidebar and home.js inside layout.js so that's why home container and sidebar is wrapped in sidebar section and used display flex property */
+.home-container {
+  height: 300px;
+  color: white;
+  width: 82%;
+  /* background: #0F172A; */
+  margin-left: 200px;
+  /* border: 2px solid red; */
+  background: #f8fafc;
+  position: relative;
+}
+
+.hero-pic {
+  margin-left: 530px;
+  position: absolute;
+  top: 50px;
+}
+.hero-pic img {
+  width: 350px;
+  height: 220px;
+  border-radius: 9px;
+  /* filter: drop-shadow(0 4px 20px rgba(65, 158, 245, 0.922)) !important; */
+  /* border: 1px solid #334155; */
+  position: relative;
+}
+.img-container::before {
+  content: "";
+  background: #f8fafc;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  transition: height 1s;
+}
+.img-container:hover::before {
+  height: 0%;
+}
+.hero-pic img:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#dark .hero-pic img:hover {
+  filter: drop-shadow(0 4px 20px rgba(65, 158, 245, 0.689));
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+#dark .img-container::before {
+  background: #0b1120;
+}
+
+.home-content h1 {
+  padding-top: 55px;
+  font-size: 48px;
+  font-weight: 700;
+  color: #0f172a;
+  /* margin-left: 150px; */
+}
+.home-content h2 {
+  /* color: #e0b50f; */
+  color: #138781;
+  padding-top: 10px;
+  font-size: 26px;
+  /* margin-left: 150px; */
+}
+.home-content p {
+  font-size: 16px;
+  padding-top: 10px;
+  color: #475569;
+}
+.home-buttons {
+  /* margin-left: 150px; */
+  margin-top: 30px;
+}
+
+.home-buttons .btn-hire {
+  background-color: #138781;
+  color: white;
+  width: 160px;
+}
+.home-buttons .btn-hire:hover {
+  background-color: white;
+  color: #138781;
+  border: 1px solid #138781;
+  width: 200px;
+  transition: 1s;
+}
+
+.home-buttons .btn-cv {
+  background-color: #f29f67;
+  color: white;
+  margin-left: 15px;
+}
+
+.home-buttons .btn-cv:hover {
+  opacity: 80%;
+  transition: 1s;
+}
+
+.theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  background-color: #1e1e1e;
+  margin-top: 20px;
+  text-align: center;
+  position: fixed;
+  right: 0;
+  cursor: pointer;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  z-index: 1;
+}
+
+#dark .theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  background-color: #5756569f;
+  margin-top: 20px;
+  text-align: center;
+  position: fixed;
+  right: 0;
+  cursor: pointer;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  z-index: 5 !important;
+}
+
+#dark .home-container {
+  background: #0b1120;
+}
+#dark .home-content h1 {
+  color: #ffffff;
+  /* color: #38BDF8; */
+}
+#dark .home-container h2 {
+  color: #38bdf8;
+  /* color: #e0b50f; */
+}
+
+#dark .home-content p {
+  color: #94a3b8;
+}
+
+#dark .home-buttons .btn-hire:hover {
+  background-color: white;
+  color: #38bdf8;
+  border: 1px solid #38bdf8;
+}
+
+#dark .home-buttons .btn-hire {
+  background-color: #38bdf8;
+  color: white;
+}
+/* =============== */
+@media (max-width: 600px) {
+  .home-container {
+    padding: 0;
+    margin: 0;
+    margin-top: 54px;
+    text-align: start;
+    height: auto;
+  }
+  .home-container h2 {
+    font-size: 24px;
+    margin-left: 20px;
+    width: 110%;
+  }
+
+  .home-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-container h1 {
+    padding-top: 30px;
+    font-size: 24px;
+    margin-left: 20px;
+  }
+
+  .home-container p {
+    font-size: 24px;
+    margin-left: 20px;
+    width: 100%;
+  }
+
+  .home-buttons .btn-hire {
+    margin-top: -18px;
+    margin-left: 22px;
+    width: 140px !important;
+  }
+
+  .home-buttons .btn-cv {
+    margin-top: 10px;
+    margin-left: 22px;
+    width: 140px;
+    margin-bottom: 25px;
+  }
+
+  .home-buttons .btn-hire:hover {
+    width: 150px;
+  }
+
+  .hero-pic {
+    position: static; /* remove absolute */
+    margin: auto 20px; /* center it */
+    display: flex;
+    justify-content: center;
+    order: -1 !important;
+  }
+
+  .img-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-pic img {
+    width: 350px; /* smaller for mobile */
+    height: auto; /* maintain ratio */
+    border-radius: 8px;
+    left: 30px;
+  }
+
+  .hero-pic img:hover {
+    box-shadow: none !important;
+    filter: none !important;
+  }
+
+  .img-container::before {
+    display: none !important;
+  }
+
+  .img-container:hover::before {
+    display: none !important;
+  }
+  .theme-btn {
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    margin-top: -40px;
+    text-align: center;
+    position: fixed;
+    right: 40px;
+    /* border: 2px solid dodgerblue; */
+  }
+  #dark .theme-btn {
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    margin-top: -40px;
+    text-align: center;
+    position: fixed;
+    right: 40px;
+  }
+}

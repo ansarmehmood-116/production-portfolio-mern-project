@@ -1,0 +1,56 @@
+
+/* =========================
+   1. RESET (GLOBAL)
+========================= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   2. ROOT HEIGHT FIX
+========================= */
+html, body, #root {
+  height: 100%;
+}
+
+/* =========================
+   3. BODY STYLING
+========================= */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #FFFFFF;
+  color: #0F172A;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-y: auto; /* Ensure vertical scroll behaves properly */
+  font-family: 'Poppins', sans-serif;
+  /* position: fixed; */
+  /* height: 100vh; */
+  /* overscroll-behavior: none; */
+}
+
+
+/* =========================
+   4. MAIN APP CONTAINER
+========================= */
+.app {
+  /* border: 2px solid red; */
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+
+
+

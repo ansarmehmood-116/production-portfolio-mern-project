@@ -1,0 +1,30 @@
+body {
+background: #FFFFFF;
+color: #0F172A;
+}
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* DARK MODE */
+#dark {
+  background: #0F172A;   
+  color: #E2E8F0;
+  /* background-color: #111111f1; */
+  /* background-color: #00000077; */
+  /* color: #f4eee0; */
+}
+
+/* ======================= */
+@media (max-width: 600px) {
+  .footer {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
