@@ -10,7 +10,7 @@ import {
   FcPortraitMode,
   FcReadingEbook,
   FcVideoProjector,
-  FcServices
+  FcServices,
 } from "react-icons/fc";
 import "./MobileNav.css";
 const MobileNav = () => {
@@ -29,23 +29,22 @@ const MobileNav = () => {
     <>
       <div className="mobile-nav">
         <div className="mobile-nav-header">
-          {open ? (
-            <AiOutlineMenuFold
-              size={30}
-              className="mobile-nav-icon"
-              onClick={handleOpen}
-            />
-          ) : (
-            <GiHamburgerMenu
-              size={30}
-              className="mobile-nav-icon"
-              onClick={handleOpen}
-            />
-          )}
-
+            {open ? (
+              <AiOutlineMenuFold
+                size={30}
+                className="mobile-nav-icon"
+                onClick={handleOpen}
+              />
+            ) : (
+              <GiHamburgerMenu
+                size={30}
+                className="mobile-nav-icon"
+                onClick={handleOpen}
+              />
+            )}
           <span className="mobile-nav-title">My Portfolio App</span>
         </div>
-        {open && (  // "open &&()" means if open is true then display all the menu data else not 
+        {open && ( // "open &&()" means if open is true then display all the menu data else not
           <div className="mobile-nav-menu">
             <div className="nav-items">
               <div className="nav-item">
@@ -98,7 +97,7 @@ const MobileNav = () => {
                     duration={100}
                   >
                     <FcServices />
-                     Services
+                    Services
                   </Link>
                 </div>
 
