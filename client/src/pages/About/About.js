@@ -7,6 +7,7 @@ const About = () => {
   return (
     <>
       <motion.div
+        //very nice jump animation 
         initial={{ y: 40, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{
@@ -16,35 +17,7 @@ const About = () => {
         }}
         viewport={{ once: true }}
       >
-        {/* very nice jump animation */}
         <div className="about" id="about">
-          {/* <div className="row">
-            <div className="col-md-6 col-xl-6 col-lg-6 col-xs-12 about-content">
-            <h1>About me</h1>
-              <p>
-                Hi, I'm Ansar, a passionate beginner developer with a growing
-                interest in web development. I'm skilled in working with modern
-                technologies like React, Node.js, Express, and MongoDB. I enjoy
-                learning about both front-end and back-end development, allowing
-                me to build full-stack applications from scratch. Currently, I'm
-                focused on enhancing my skills by working on exciting projects
-                like e-commerce platforms and other Web applications. <br /><br />
-                My journey as a developer is just beginning, but I'm constantly
-                pushing myself to learn more and stay updated with the latest
-                trends in the tech industry. I love problem-solving, and the
-                challenge of coding motivates me to keep improving. I'm excited
-                to continue this journey and contribute to impactful projects
-                that solve real-world problems.
-              </p>
-            </div>
-            <div className="col-md-6 col-xl-6 col-lg-6 col-xs-12 about-img">
-              <img
-                src={profile}
-              //  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzHQv_th9wq3ivQ1CVk7UZRxhbPq64oQrg5Q&usqp=CAU"
-                alt="profile_pic"
-              />
-            </div>
-          </div> */}
           <div className="about-container">
             <div className="about-text">
               <h2 className>About Me</h2>

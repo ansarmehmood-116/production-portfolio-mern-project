@@ -5,47 +5,14 @@
     background: #F8FAFC;
     border: 1px solid #E2E8F0;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
     /* goto google and search "css box shadows" and you will get 95 best designs */
-  
   }
   
-  /* .about-img {
-    order: 2; /* Move the image to the right
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  /* .about-content {
+    order: 1;
+    flex: 1;
   } */
-  .about-img img {
-    border-radius: 10px;
-    width: 100%;
-    max-width: 300px;
-    height: 300px;
-    /* height: auto; */
-  }
   
-  .about-content {
-    /* order: 1;
-    flex: 1; */
-    /* padding-right: 30px; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* .about-content h1 {
-    color: gray;
-    font-family: cursive;
-    border-bottom: 2px solid gray;
-    text-align: center;
-  } */
- 
-  /* .about-content p {
-    text-align: justify;
-    padding: 20px;
-  } */
-
   .about-container {
     display: flex;
     align-items: center;
@@ -55,7 +22,6 @@
   .about-image img {
     width: 180px;
     border-radius: 20%;
-    /* filter: drop-shadow(0 4px 20px rgba(65, 158, 245, 0.922)); */
     filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.15));
   }
   .about-image img:hover {
@@ -73,9 +39,8 @@
   }
 
   .about-text h2{
-    margin-left: 20px;
-    color: gray;
     /* font-family: cursive; */
+    color: gray;
     text-decoration: underline;
     text-align: center;
   }
@@ -123,6 +88,6 @@
     }
   
     .about-text {
-      text-align: start;
+      text-align: start !important;
     }
   }
