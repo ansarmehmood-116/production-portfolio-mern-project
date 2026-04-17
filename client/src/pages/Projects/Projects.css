@@ -102,7 +102,11 @@
     border: 1px solid #334155;
     color: white;
   }
-
+  #dark .project .card:hover {
+    border-radius: 4px;
+    box-shadow: 12px 15px 20px 0px rgba(71, 161, 234, 0.15);
+    transition: all 1s ease;
+  }
   #dark .project p{
     color: #94A3B8;
   }

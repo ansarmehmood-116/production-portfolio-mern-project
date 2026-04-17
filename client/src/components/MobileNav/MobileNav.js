@@ -98,7 +98,7 @@ const MobileNav = () => {
                     duration={100}
                   >
                     <FcServices />
-                    Skills & Services
+                     Services
                   </Link>
                 </div>
 

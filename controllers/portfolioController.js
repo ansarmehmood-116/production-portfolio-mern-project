@@ -22,7 +22,7 @@ const sendEmailController = async (req, res) => {
     const response = await mailerSend.email.send({
       from: {
         email: process.env.MAILERSEND_SENDER_EMAIL, // Your MailerSend verified sender email
-        name: "AnsarTech", // Sender name (optional)
+        name: name // Sender name (optional)
       },
       to: [
         {

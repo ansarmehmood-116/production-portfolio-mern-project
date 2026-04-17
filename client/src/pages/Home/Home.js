@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect"; //see frontend Notes for details
 import Resume from "../../assets/docs/My_Resume.pdf";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs"; //bs means inside react-icons bs folder
 import "./home.css";
-import Fade from "react-reveal/Fade";
+import { motion } from "framer-motion";
 import profile from "../../assets/images/a1.png";
 
 const Home = () => {
@@ -25,7 +25,12 @@ const Home = () => {
         </div>
         {/* press "window button + ." so icons will appear we have used hand icon*/}
         <div className="container home-content">
-          <Fade right>
+          <motion.div
+            initial={{ opacity: 0, x: 150 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <h1>Hi 👋 I'm Ansar</h1>
             <h2>
               <Typewriter
@@ -43,8 +48,13 @@ const Home = () => {
             <p>
               I build scalable modern web applications using React & Node.js!
             </p>
-          </Fade>
-          <Fade bottom>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 150 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <div className="home-buttons">
               <a
                 className="btn btn-hire"
@@ -58,7 +68,7 @@ const Home = () => {
                 My Resume
               </a>
             </div>
-          </Fade>
+          </motion.div>
           <div className="hero-pic">
             <div className="img-container">
               <img src={profile} alt="profile pic" />

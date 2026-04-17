@@ -1,12 +1,21 @@
 import React from "react";
 import "./About.css";
-import Jump from "react-reveal/Jump";
+import { motion } from "framer-motion";
 import profile from "../../assets/images/AnsarPro.png";
 
 const About = () => {
   return (
     <>
-      <Jump>
+      <motion.div
+        initial={{ y: 40, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          type: "spring",
+          stiffness: 200,
+          damping: 10,
+        }}
+        viewport={{ once: true }}
+      >
         {/* very nice jump animation */}
         <div className="about" id="about">
           {/* <div className="row">
@@ -41,8 +50,7 @@ const About = () => {
               <h2 className>About Me</h2>
               <ul>
                 <li>
-                  Graduated Software Engineer and aspiring Full
-                  Stack Developer
+                  Graduated Software Engineer and aspiring Full Stack Developer
                 </li>
                 <li>
                   1.5+ years hands-on experience with MERN stack (React,
@@ -74,7 +82,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </Jump>
+      </motion.div>
     </>
   );
 };

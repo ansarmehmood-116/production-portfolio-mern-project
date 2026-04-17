@@ -14,7 +14,8 @@ app.use(cors());
 app.use(express.json());
 
 //static files access
-app.use(express.static(path.join(__dirname, "./client/build"))); //during deploy get files access
+app.use(express.static(path.join(__dirname, "./client/build")));
+ //during deploy get files access from build as they are static and code hides "use npm run dev in terminal in client so build folder will be created that is used for static files upload without code for optimized deploye in vercel"
 
 //routes
 // app.get('/',(req,res)=>{

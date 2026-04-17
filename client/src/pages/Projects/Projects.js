@@ -1,7 +1,7 @@
 import React from "react";
 import "./Projects.css";
-import Rotate from "react-reveal/Rotate";
-import Spin from "react-reveal/Spin";
+import { motion } from "framer-motion";
+// import Spin from "react-reveal/Spin";
 const Projects = () => {
   return (
     <>
@@ -11,8 +11,8 @@ const Projects = () => {
         </h2>
         <hr />
         <p className="pb-3 text-center">
-          As a passionate developer, I am continually honing my skills
-          in full-stack development, working with technologies such as React,
+          As a passionate developer, I am continually honing my skills in
+          full-stack development, working with technologies such as React,
           Node.js, Express, and MongoDB. These projects demonstrate my growing
           expertise in building web and mobile applications, with a focus on
           creating responsive, user-friendly designs. Each project showcases my
@@ -24,106 +24,128 @@ const Projects = () => {
         {/* card design */}
         <div className="row" id="ads">
           {/* <Spin> */}
-          <Rotate right duration={800}>
-            <div className="col-md-4">
-              <div className="card rounded">
-                <div className="card-image">
-                  <span className="card-notify-badge">Mern stack</span>
-                  <img
-                    src="https://unctad.org/sites/default/files/2021-03/2021-03-15_eCommerceCOVID19report-1-1220x675px.jpg"
-                    alt="project1"
-                  />
+          <motion.div
+            className="col-12 col-sm-6 col-md-4 mb-4"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.03 }}
+          >
+            <div className="card rounded">
+              <div className="card-image">
+                <span className="card-notify-badge">Mern stack</span>
+                <img
+                  src="https://unctad.org/sites/default/files/2021-03/2021-03-15_eCommerceCOVID19report-1-1220x675px.jpg"
+                  alt="project1"
+                />
+              </div>
+              <div className="card-image-overly m-auto mt-3">
+                <span className="card-detail-badge">Node</span>
+                <span className="card-detail-badge">Express</span>
+                <span className="card-detail-badge">react</span>
+                <span className="card-detail-badge">Mongodb</span>
+              </div>
+              <div className="card-body text-center">
+                <div className="ad-title m-auto">
+                  <h5 className="text-uppercase">E-commerce Website</h5>
+                  <p>
+                    Full-stack MERN app with authentication, admin dashboard,
+                    and order management system.
+                  </p>
                 </div>
-                <div className="card-image-overly m-auto mt-3">
-                  <span className="card-detail-badge">Node</span>
-                  <span className="card-detail-badge">Express</span>
-                  <span className="card-detail-badge">react</span>
-                  <span className="card-detail-badge">Mongodb</span>
-                </div>
-                <div className="card-body text-center">
-                  <div className="ad-title m-auto">
-                    <h5 className="text-uppercase">E-commerce Website</h5>
-                    <p>
-                    Full-stack MERN app with authentication, admin dashboard, and order management system.
-                    </p>
-                  </div>
-                  <a className="ad-btn" href="">
-                    {/* View */}
-                    Live Demo
-                  </a>
-                  <a className="ad-btn" href="">
-                    Github
-                  </a>
-                </div>
+                <a className="ad-btn" href="#contact">
+                  {/* View */}
+                  Live Demo
+                </a>
+                <a className="ad-btn" href="#contact">
+                  Github
+                </a>
               </div>
             </div>
-            <div className="col-md-4">
-              <div className="card rounded">
-                <div className="card-image">
-                  <span className="card-notify-badge">Mern Stack</span>
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR356D-1YtSagN4-_ZdjZ5H9o6PKUO4h12dvw&usqp=CAU"
-                    alt="project2"
-                  />
+          </motion.div>
+          <motion.div
+            className="col-12 col-sm-6 col-md-4 mb-4"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.03 }}
+          >
+            <div className="card rounded">
+              <div className="card-image">
+                <span className="card-notify-badge">Mern Stack</span>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR356D-1YtSagN4-_ZdjZ5H9o6PKUO4h12dvw&usqp=CAU"
+                  alt="project2"
+                />
+              </div>
+              <div className="card-image-overly m-auto mt-3">
+                <span className="card-detail-badge">React</span>
+                <span className="card-detail-badge">Node</span>
+                <span className="card-detail-badge">Express</span>
+                <span className="card-detail-badge">API's</span>
+              </div>
+              <div className="card-body text-center">
+                <div className="ad-title m-auto">
+                  <h5 className="text-uppercase">PERSONAL PORTFOLIO</h5>
+                  <p>
+                    Full-stack MERN app with authentication, admin dashboard,
+                    and order management system.
+                  </p>
                 </div>
-                <div className="card-image-overly m-auto mt-3">
-                  <span className="card-detail-badge">React</span>
-                  <span className="card-detail-badge">Node</span>
-                  <span className="card-detail-badge">Express</span>
-                  <span className="card-detail-badge">API's</span>
-                </div>
-                <div className="card-body text-center">
-                  <div className="ad-title m-auto">
-                    <h5 className="text-uppercase">PERSONAL PORTFOLIO</h5>
-                    <p>
-                    Full-stack MERN app with authentication, admin dashboard, and order management system.
-                    </p>
-                  </div>
-                  <a className="ad-btn" href="">
-                    {/* View */}
-                    Live Demo
-                  </a>
-                  <a className="ad-btn" href="">
-                    Github
-                  </a>
-                </div>
+                <a className="ad-btn" href="#contact">
+                  {/* View */}
+                  Live Demo
+                </a>
+                <a className="ad-btn" href="#contact">
+                  Github
+                </a>
               </div>
             </div>
-            <div className="col-md-4">
-              <div className="card rounded">
-                <div className="card-image">
-                  <span className="card-notify-badge">Mern Stack</span>
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR356D-1YtSagN4-_ZdjZ5H9o6PKUO4h12dvw&usqp=CAU"
-                    alt="project1"
-                  />
-                </div>
-                <div className="card-image-overly m-auto mt-3">
-                  <span className="card-detail-badge">react</span>
-                  <span className="card-detail-badge">Node</span>
-                  <span className="card-detail-badge">Express</span>
+          </motion.div>
+          <motion.div
+            className="col-12 col-sm-6 col-md-4 mb-4"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.03 }}
+          >
+            <div className="card rounded">
+              <div className="card-image">
+                <span className="card-notify-badge">Mern Stack</span>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR356D-1YtSagN4-_ZdjZ5H9o6PKUO4h12dvw&usqp=CAU"
+                  alt="project1"
+                />
+              </div>
+              <div className="card-image-overly m-auto mt-3">
+                <span className="card-detail-badge">react</span>
+                <span className="card-detail-badge">Node</span>
+                <span className="card-detail-badge">Express</span>
 
-                  <span className="card-detail-badge">Mongodb</span>
+                <span className="card-detail-badge">Mongodb</span>
+              </div>
+              <div className="card-body text-center">
+                <div className="ad-title m-auto">
+                  <h5 className="text-uppercase">Chatting-Application</h5>
+                  <p>
+                    Full-stack MERN app with authentication, admin dashboard,
+                    and order management system.
+                  </p>
                 </div>
-                <div className="card-body text-center">
-                  <div className="ad-title m-auto">
-                    <h5 className="text-uppercase">Chatting-Application</h5>
-                    <p>
-                    Full-stack MERN app with authentication, admin dashboard, and order management system.
-                    </p>
-                  </div>
-                  <a className="ad-btn" href="">
-                    {/* View */}
-                    Live Demo
-                  </a>
-                  <a className="ad-btn" href="">
-                    Github
-                  </a>
-                </div>
+                <a className="ad-btn" href="#contact">
+                  {/* View */}
+                  Live Demo
+                </a>
+                <a className="ad-btn" href="#contact">
+                  Github
+                </a>
               </div>
             </div>
+          </motion.div>
           {/* </Spin> */}
-          </Rotate>
         </div>
       </div>
     </>

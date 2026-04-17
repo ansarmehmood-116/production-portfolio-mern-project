@@ -1,7 +1,6 @@
 import React from "react";
 import "./Menus.css";
-import Zoom from "react-reveal/Zoom";
-import Fade from "react-reveal/Fade";
+import { motion } from "framer-motion";
 import { Link } from "react-scroll"; //see details for this in frontend-Notes.jsx file
 import {
   //these all are react icons from react icon library we have installed see details in
@@ -13,7 +12,7 @@ import {
   FcPortraitMode,
   FcReadingEbook,
   FcVideoProjector,
-  FcServices
+  FcServices,
 } from "react-icons/fc";
 import profile from "../../assets/images/Ansar2.jfif";
 
@@ -24,7 +23,12 @@ const Menus = ({ toggle }) => {
     <>
       {toggle ? (
         <>
-          <Zoom>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
             <div className="navbar-profile-pic">
               <img
                 src={profile}
@@ -32,8 +36,13 @@ const Menus = ({ toggle }) => {
                 alt="profile pic"
               />
             </div>
-          </Zoom>
-          <Fade left>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
             <div className="nav-items">
               <div className="nav-item">
                 <div className="nav-link">
@@ -138,7 +147,7 @@ const Menus = ({ toggle }) => {
                 </div>
               </div>
             </div>
-          </Fade>
+          </motion.div>
         </>
       ) : (
         <>

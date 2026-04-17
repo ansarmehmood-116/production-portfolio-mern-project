@@ -2,25 +2,25 @@ import { BsFiletypeHtml, BsFiletypeCss, BsBootstrap } from "react-icons/bs";
 // goto react icons on google and reactjs these all are availbale
 
 import { FaNodeJs } from "react-icons/fa";
-import { TbBrandNextjs } from "react-icons/tb";
+// import { TbBrandNextjs } from "react-icons/tb";
 import {
   SiJavascript,
   SiMui,
   SiReact,
   SiTailwindcss,
   SiFigma,
-  SiAdobexd,
-  SiAdobephotoshop,
+  // SiAdobexd,
+  // SiAdobephotoshop,
   SiMongodb,
   SiMysql,
-  SiTypescript,
+  // SiTypescript,
   SiGithub,
-  SiWordpress,
-  SiFirebase,
-  SiDocker,
+  // SiWordpress,
+  // SiFirebase,
+  // SiDocker,
   SiExpress,
-  SiNginx,
-  SiAngular,
+  // SiNginx,
+  // SiAngular,
   SiCplusplus,
   SiPython,
   SiPhp

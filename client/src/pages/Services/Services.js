@@ -1,12 +1,21 @@
 import React from "react";
 import "./Services.css";
-import Jump from "react-reveal/Jump";
+import { motion } from "framer-motion";
 import profile from "../../assets/images/Service1.png";
 
 const Services = () => {
   return (
     <>
-      <Jump>
+      <motion.div
+        initial={{ y: 40, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          type: "spring",
+          stiffness: 200,
+          damping: 10,
+        }}
+        viewport={{ once: true }}
+      >
         <div className="service-container" id="service">
           <h2 className=" text-uppercase">What I Can Do</h2>
           <hr />
@@ -25,7 +34,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-      </Jump>
+      </motion.div>
     </>
   );
 };

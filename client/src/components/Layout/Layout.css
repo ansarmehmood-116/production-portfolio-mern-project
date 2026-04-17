@@ -4,7 +4,6 @@
   /* border: 10px solid red; */
   background: #F8FAFC;
   border-bottom: 1px solid #E2E8F0;
-
   /* border-bottom: 1px solid #CBD5F5; */
   /* border-bottom: 1px solid;
   border-image: linear-gradient(to right, #138781, #0EA5E9) 1; */
@@ -24,6 +23,7 @@
   position: fixed;
   overflow-y: scroll;
   padding-bottom: 20px;
+  z-index: 1;
   /* Chrome, Safari */
   
   /* this fixed property has keeped it fixed with whole page while other components are scrolling.If we remove this property then by default it will still remain fixed untill we use relative or absolute position then it will move with other components */

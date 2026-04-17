@@ -11,8 +11,8 @@
 /* =========================
    2. ROOT HEIGHT FIX
 ========================= */
-html, body, #root {
-  height: 100%;
+html, #root {
+  height: 100% !important;
 }
 
 /* =========================
@@ -49,6 +49,87 @@ body {
 
 
 
+.footer-container {
+  /* width: 85%;
+  margin-left: 15%; */
+  position: relative;
+  padding: 25px 0;
+  padding-left: 140px;
+  background: transparent; 
+  text-align: center;
+  color: #1e293b; /* Muted slate color */
+  /* border: 2px solid red; */
+  margin-bottom: 0px;
+}
+.footer-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%; /* Makes the line shorter than the screen width */
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(
+    to right, 
+    transparent, 
+    rgba(0, 0, 0, 0.1) 20%, 
+    rgba(0, 0, 0, 0.1) 80%, 
+    transparent
+  );
+}
+
+/* Dark Mode */
+#dark .footer-container{
+  background: transparent;
+  color: #94a3b8
+}
+#dark .footer-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px; /* 1px looks sharper on dark backgrounds */
+  background: linear-gradient(
+    to right, 
+    transparent, 
+    rgba(255, 255, 255, 0.15) 20%, 
+    rgba(255, 255, 255, 0.15) 80%, 
+    transparent
+  );
+}
+
+.footer-content p {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+#dark .footer-content strong {
+  /* Highlights your name */
+  color: #fff;  
+}
+
+.heart-beat {
+  display: inline-block;
+  color: #ef4444;
+  animation: beat .3s infinite alternate;
+}
+
+@keyframes beat {
+  to { transform: scale(1.2); }
+}
+
+@media (max-width: 600px) {
+  /* .footer {
+    margin-bottom: 0 !important; 
+    margin-top: 28px ;
+    padding-bottom: 10px; 
+    Use padding if you want extra space, not margin
+  } */
+  .footer-container{
+    margin-top: 20px;
+    padding: 27px 0;
+  }
+  }
 
 
 

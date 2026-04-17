@@ -110,6 +110,7 @@
         text-align: center;
         padding: 0 40px;
         text-align: left;
+        border-right: none !important;
       }
-
+  
   }
