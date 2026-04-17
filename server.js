@@ -14,7 +14,8 @@ app.use(cors());
 app.use(express.json());
 
 //static files access
-app.use(express.static(path.join(__dirname, "./client/build")));
+//Only using Build we can do it
+// app.use(express.static(path.join(__dirname, "./client/build")));
  //during deploy get files access from build as they are static and code hides "use npm run dev in terminal in client so build folder will be created that is used for static files upload without code for optimized deploye in vercel"
 
 //routes
@@ -29,9 +30,11 @@ app.use(express.static(path.join(__dirname, "./client/build")));
 app.use("/api/v1/portfolio", require("./routes/portfolioRoute"));
 //Remember that in browser we always can "get" the server response and we can't post on brwoser directly
 
-app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-}); //during deploy get files 
+
+//Only using Build we can do it
+// app.get("*", function (req, res) {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// }); //during deploy get files 
 
 //port
 const PORT = process.env.PORT || 8080; //"|| means if dot env not works then use 8080 directly"
