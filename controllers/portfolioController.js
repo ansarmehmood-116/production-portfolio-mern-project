@@ -70,6 +70,7 @@ const sendEmailController = async (req, res) => {
     });
   } catch (error) {
     console.log(error);
+    console.log("API KEY CHECK:", process.env.MAILERSEND_API_KEY ? "Loaded" : "Not Found");
     return res.status(500).send({
       success: false,
       message: "Send Email API Error",

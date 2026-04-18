@@ -1,6 +1,8 @@
 import React from "react";
 import "./Projects.css";
 import { motion } from "framer-motion";
+import profile from "../../assets/images/portfolioo.jpeg";
+import chatProfile from "../../assets/images/chat.avif";
 // import Spin from "react-reveal/Spin";
 const Projects = () => {
   return (
@@ -50,8 +52,7 @@ const Projects = () => {
                 <div className="ad-title m-auto">
                   <h5 className="text-uppercase">E-commerce Website</h5>
                   <p>
-                    Full-stack MERN app with authentication, admin dashboard,
-                    and order management system.
+                    Full-stack MERN app with secure JWT authentication, admin dashboard, order management with real-time status updates. Enhanced user experience with dynamic category-based and price-range searching/filtering.
                   </p>
                 </div>
                 <a className="ad-btn" href="#contact">
@@ -73,10 +74,10 @@ const Projects = () => {
             whileHover={{ scale: 1.03 }}
           >
             <div className="card rounded">
-              <div className="card-image">
+              <div className="card-image porfolio-img">
                 <span className="card-notify-badge">Mern Stack</span>
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR356D-1YtSagN4-_ZdjZ5H9o6PKUO4h12dvw&usqp=CAU"
+                  src={profile}
                   alt="project2"
                 />
               </div>
@@ -90,15 +91,14 @@ const Projects = () => {
                 <div className="ad-title m-auto">
                   <h5 className="text-uppercase">PERSONAL PORTFOLIO</h5>
                   <p>
-                    Full-stack MERN app with authentication, admin dashboard,
-                    and order management system.
+                  Full-stack MERN portfolio featuring a Serverless Node.js backend for real-time contact and email via MailerSend notifications, engineered with a pixel-perfect, fully responsive design for seamless display on all devices.
                   </p>
                 </div>
-                <a className="ad-btn" href="#contact">
+                <a className="ad-btn" href="https://ansar-mern-portfolio.vercel.app/">
                   {/* View */}
                   Live Demo
                 </a>
-                <a className="ad-btn" href="#contact">
+                <a className="ad-btn" href="https://github.com/ansarmehmood-116/production-portfolio-mern-project.git">
                   Github
                 </a>
               </div>
@@ -116,7 +116,7 @@ const Projects = () => {
               <div className="card-image">
                 <span className="card-notify-badge">Mern Stack</span>
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR356D-1YtSagN4-_ZdjZ5H9o6PKUO4h12dvw&usqp=CAU"
+                  src={chatProfile}
                   alt="project1"
                 />
               </div>
@@ -131,8 +131,7 @@ const Projects = () => {
                 <div className="ad-title m-auto">
                   <h5 className="text-uppercase">Chatting-Application</h5>
                   <p>
-                    Full-stack MERN app with authentication, admin dashboard,
-                    and order management system.
+                  Real-time MERN chatting app featuring secure user authentication and instant messaging powered by Socket.io.Dynamic user interface with real-time active status and message history management using MongoDB.
                   </p>
                 </div>
                 <a className="ad-btn" href="#contact">

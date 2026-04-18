@@ -35,6 +35,13 @@
     width: 100%;
   }
   
+  .porfolio-img{
+  width: 100%;
+  height: 150px;      /* Set your desired fixed height */
+  object-fit: contain;
+  /* background-color: #0a192f; Use your theme's dark color to fill gaps */
+  }
+
   .card-detail-badge {
     background-color: #e0b50f;
     text-align: center;
@@ -58,6 +65,11 @@
     transition: all 1s ease;
   }
   
+  .ad-title p{
+    text-align:justify;
+    padding: 0 10px;
+  }
+
   .ad-btn {
     text-transform: uppercase;
     width: 160px;
@@ -144,9 +156,9 @@
     .project .card {
       margin-top: 30px;
     }
-
+    
     .project p{
-      text-align: start !important;
+      text-align: justify !important;
       padding: 0 12px;
       padding-top: 10px;
     }

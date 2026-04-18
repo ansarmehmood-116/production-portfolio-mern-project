@@ -1,7 +1,8 @@
 const express = require("express"); //it is an ES5 module syntax
 const cors = require("cors");
 const dotenv = require("dotenv");
-const path = require("path"); //during deploy time use it
+
+// const path = require("path"); //during deploy time use it
 
 //dotenv configuartion
 dotenv.config();
