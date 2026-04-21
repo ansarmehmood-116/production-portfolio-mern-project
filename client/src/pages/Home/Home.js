@@ -1,7 +1,7 @@
 import React from "react";
 import { useTheme } from "../../context/ThemeContext";
 import Typewriter from "typewriter-effect"; //see frontend Notes for details
-import Resume from "../../assets/docs/My_Resume.pdf";
+import Resume from "../../assets/docs/Ansar_Resume.pdf";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs"; //bs means inside react-icons bs folder
 import "./home.css";
 import { motion } from "framer-motion";
@@ -64,18 +64,24 @@ const Home = () => {
               >
                 Hire Me
               </a>
-              <a className="btn btn-cv" href={Resume} download="My_Resume.pdf">
+              <a
+                className="btn btn-cv"
+                href={Resume}
+                download="Ansar_Resume.pdf"
+              >
                 My Resume
               </a>
             </div>
           </motion.div>
           <div className="hero-pic">
-            <div className="img-container">
-              <img src={profile} alt="profile pic" />
+            <span class="borderLine"></span>
+            
+              <div className="img-container">
+                <img src={profile} alt="profile pic" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 };

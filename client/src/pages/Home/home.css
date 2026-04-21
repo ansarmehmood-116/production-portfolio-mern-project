@@ -9,47 +9,143 @@
   background: #f8fafc;
   position: relative;
 }
-
 .hero-pic {
-  margin-left: 530px;
-  position: absolute;
-  top: 50px;
-}
-.hero-pic img {
-  width: 350px;
-  height: 220px;
-  border-radius: 9px;
-  /* filter: drop-shadow(0 4px 20px rgba(65, 158, 245, 0.922)) !important; */
-  /* border: 1px solid #334155; */
   position: relative;
+  width: 350px;
+  height: 240px;
+  top: 30px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-left: 540px;
+  position: absolute;
+  text-align: center;
+  align-content: center;
+  z-index: 190;
 }
+
+.img-container img {
+  width: 342px;
+  height: 232px ;
+  border-radius: 8px;
+  position: relative;
+  z-index: 200;
+}
+
 .img-container::before {
   content: "";
-  background: #f8fafc;
+  background: #f8fafcdd;
   height: 100%;
   width: 100%;
   border-radius: 8px;
   position: absolute;
-  top: 0;
-  z-index: 1;
+  inset: 0; 
+  z-index: 210;
   transition: height 1s;
 }
 .img-container:hover::before {
   height: 0%;
 }
-.hero-pic img:hover {
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+#dark .img-container::before {
+  background: #0b1120e4;
 }
 
-#dark .hero-pic img:hover {
-  filter: drop-shadow(0 4px 20px rgba(65, 158, 245, 0.689));
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+/* ______________________Border Animation____________________ */
+.hero-pic::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 350px;
+  height: 240px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #45f3ff,
+    #45f3ff,
+    #45f3ff
+  );
+  z-index: 10;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
 }
-#dark .img-container::before {
-  background: #0b1120;
+.hero-pic::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 350px;
+  height: 240px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #45f3ff,
+    #45f3ff,
+    #45f3ff
+  );
+  z-index: 10;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
 }
+.borderLine {
+  position: absolute;
+  top: 0;
+  inset: 0;
+}
+.borderLine::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 350px;
+  height: 240px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #ff2770,
+    #ff2770,
+    #ff2770
+  );
+  z-index: 10;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -1.5s;
+}
+.borderLine::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 350px;
+  height: 240px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #ff2770,
+    #ff2770,
+    #ff2770
+  );
+  z-index: 10;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -4.5s;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* _____________________________________________________________________________ */
+
 
 .home-content h1 {
   padding-top: 55px;

@@ -14,7 +14,7 @@ import {
   FcVideoProjector,
   FcServices,
 } from "react-icons/fc";
-import profile from "../../assets/images/Ansar2.jfif";
+import profile from "../../assets/images/Ansar2.png";
 
 const Menus = ({ toggle }) => {
   //{toggle} we have passed this props in ES6 and assign value to it in Layout.js
@@ -24,10 +24,12 @@ const Menus = ({ toggle }) => {
       {toggle ? (
         <>
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            viewport={{ once: true }}
+          // it animates on reload & hover the img for extra zoom-out on hover see css
+             initial={{ opacity: 0, y: 40 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             transition={{ duration: 0.5, ease: "easeOut" }}
+             viewport={{ once: true }}
+             whileHover={{ scale: 1.03 }}
           >
             <div className="navbar-profile-pic">
               <img
