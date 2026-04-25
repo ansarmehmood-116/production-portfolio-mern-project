@@ -91,7 +91,7 @@ const Projects = () => {
                 <div className="ad-title m-auto">
                   <h5 className="text-uppercase">PERSONAL PORTFOLIO</h5>
                   <p>
-                  Full-stack MERN portfolio featuring a Serverless Node.js backend for real-time contact and email via MailerSend notifications, engineered with a pixel-perfect, fully responsive design for seamless display on all devices.
+                  Full-stack MERN portfolio featuring a Serverless Node.js backend for real-time contact and email via NodeMailer notifications, engineered with a pixel-perfect, fully responsive design for seamless display on all devices.
                   </p>
                 </div>
                 <a className="ad-btn" href="https://ansar-mern-portfolio.vercel.app/">

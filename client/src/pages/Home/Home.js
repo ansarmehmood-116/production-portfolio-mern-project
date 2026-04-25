@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, React } from "react";
 import { useTheme } from "../../context/ThemeContext";
 import Typewriter from "typewriter-effect"; //see frontend Notes for details
 import Resume from "../../assets/docs/Ansar_Resume.pdf";
@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import profile from "../../assets/images/a1.png";
 
 const Home = () => {
+  const [active, setActive] = useState(false);
   const [theme, setTheme] = useTheme(); //now simply use in App.js it will work on all components
   //handle theme
   const handleTheme = () => {
@@ -73,15 +74,26 @@ const Home = () => {
               </a>
             </div>
           </motion.div>
-          <div className="hero-pic">
-            <span class="borderLine"></span>
-            
-              <div className="img-container">
-                <img src={profile} alt="profile pic" />
-              </div>
+
+          {/* ___________________________________________________________ */}
+          {/* 🔥 Overlay (put here) */}
+          {active && (
+            <div className="overlay" onClick={() => setActive(false)} />
+          )}
+          <div className={`dropdown-hover ${active ? "active" : ""}`}>
+            <div className="hero-pic" >
+              <span className="borderLine"></span>
+              {/* <div className="img-container"> */}
+                <img
+                  src={profile}
+                  alt="profile pic"
+                  onClick={() => setActive(!active)}
+                />
+              {/* </div> */}
             </div>
           </div>
         </div>
+      </div>
     </>
   );
 };
