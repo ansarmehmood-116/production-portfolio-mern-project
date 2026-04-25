@@ -15,6 +15,7 @@ const Contact = () => {
   const [timer, setTimer] = useState(0);
   const [otpSubmitted, setOtpSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [isBlocked, setIsBlocked] = useState(false);
   const otpRefs = React.useRef([]);
   // the state names should be exactly same with backend controller variables i.e name,email,msg otherwise it will not work and we have to make alias for that.
 
@@ -61,12 +62,18 @@ const Contact = () => {
     try {
       // IF OTP SCREEN NOT SHOWN → SEND OTP
       if (!showOtp) {
-        toast.info("Sending OTP...");
+        // toast.info("Sending OTP...");
+        if (isBlocked) {
+          return toast.error("You are blocked for 3 hours due to multiple failed attempts.");
+        }
+
+        const loadingToast = toast.loading("Sending OTP...");
         const res = await axios.post("/api/v1/portfolio/sendEmail", {
           name,
           email,
           msg,
         });
+        toast.dismiss(loadingToast);
         if (res.data.otpSent) {
           setLoading(false);
           toast.success("OTP sent to your email 📩");
@@ -113,6 +120,10 @@ const Contact = () => {
       const errorMsg =
         error.response?.data?.message || "Something went wrong. Try again!";
 
+      // 🚫 Detect block
+      if (errorMsg.toLowerCase().includes("blocked")) {
+        setIsBlocked(true);
+      }
       toast.error(errorMsg);
       console.log("Backend Error:", errorMsg);
     }
@@ -281,6 +292,19 @@ const Contact = () => {
                       </div>
                     )}
                     {/* ____________________________________________ */}
+                    {isBlocked && (
+                      <p
+                        style={{
+                          color: "red",
+                          textAlign: "center",
+                          marginBottom: "10px",
+                        }}
+                      >
+                        You are blocked for 3 hours due to multiple failed
+                        attempts.
+                      </p>
+                    )}
+
                     <div className="row px-3">
                       <button
                         className="button"
