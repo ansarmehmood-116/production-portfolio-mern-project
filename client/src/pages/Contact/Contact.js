@@ -241,7 +241,7 @@ const Contact = () => {
                         onChange={(e) => setEmail(e.target.value)}
                         disabled={showOtp}
                         style={{
-                          backgroundColor: showOtp ? "#e9ecef" : "white",
+                          // backgroundColor: showOtp ? "#e9ecef" : "white",
                           cursor: showOtp ? "not-allowed" : "text",
                         }}
                       />
