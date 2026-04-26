@@ -53,13 +53,12 @@ const Contact = () => {
   //handle submit button
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
     // 1. Better Frontend Check (Prevents unnecessary API calls) also check
     if (!name || !email || !msg) {
       // if (!name && !email && !msg) {
       return toast.error("Please fill in all fields before sending.");
     }
-
+    setLoading(true);
     try {
       // IF OTP SCREEN NOT SHOWN → SEND OTP
       if (!showOtp) {
@@ -326,6 +325,9 @@ const Contact = () => {
                           isBlocked ||
                           (showOtp && otp.join("").length !== 6)
                         }
+                        style={{
+                          cursor: isBlocked ? "not-allowed" : "cursor",
+                        }}
                       >
                         {loading
                           ? "Please wait..."
