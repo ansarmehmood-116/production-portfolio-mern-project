@@ -2,7 +2,7 @@ import React from "react";
 import "./Projects.css";
 import { motion } from "framer-motion";
 import profile from "../../assets/images/portfolioo.jpeg";
-import chatProfile from "../../assets/images/chat.avif";
+import chatProfile from "../../assets/images/chat.png";
 // import Spin from "react-reveal/Spin";
 const Projects = () => {
   return (

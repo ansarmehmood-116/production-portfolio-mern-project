@@ -125,9 +125,9 @@ const Contact = () => {
     } catch (error) {
       // 3. This is where the BACKEND ERROR message lives!
 
-      setLoading(false);
       toast.dismiss(loadingToastId.current);
-
+      setLoading(false);
+      
       // We check if the backend sent a specific message (like "Name is required")
       const errorMsg =
         error.response?.data?.message || "Something went wrong. Try again!";
