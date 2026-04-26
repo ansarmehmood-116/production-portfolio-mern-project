@@ -17,6 +17,7 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [isBlocked, setIsBlocked] = useState(false);
   const otpRefs = React.useRef([]);
+  const loadingToastId = React.useRef(null);
   // the state names should be exactly same with backend controller variables i.e name,email,msg otherwise it will not work and we have to make alias for that.
 
   const handleOtpChange = (value, index) => {
@@ -64,16 +65,24 @@ const Contact = () => {
       if (!showOtp) {
         // toast.info("Sending OTP...");
         if (isBlocked) {
-          return toast.error("You are blocked for 3 hours due to multiple failed attempts.");
+          return toast.error(
+            "You are blocked for 3 hours due to multiple failed attempts."
+          );
         }
 
-        const loadingToast = toast.loading("Sending OTP...");
+        //it still triggers after block state
+        // const loadingToast=toast.loading("Verifying email...");
+
+        loadingToastId.current = toast.loading("Verifying email...");
         const res = await axios.post("/api/v1/portfolio/sendEmail", {
           name,
           email,
           msg,
         });
-        toast.dismiss(loadingToast);
+
+        //it still triggers after block state
+        // toast.dismiss(loadingToast);
+        toast.dismiss(loadingToastId.current);
         if (res.data.otpSent) {
           setLoading(false);
           toast.success("OTP sent to your email 📩");
@@ -115,8 +124,11 @@ const Contact = () => {
       }
     } catch (error) {
       // 3. This is where the BACKEND ERROR message lives!
-      // We check if the backend sent a specific message (like "Name is required")
+
       setLoading(false);
+      toast.dismiss(loadingToastId.current);
+
+      // We check if the backend sent a specific message (like "Name is required")
       const errorMsg =
         error.response?.data?.message || "Something went wrong. Try again!";
 
@@ -310,7 +322,9 @@ const Contact = () => {
                         className="button"
                         onClick={handleSubmit}
                         disabled={
-                          loading || (showOtp && otp.join("").length !== 6)
+                          loading ||
+                          isBlocked ||
+                          (showOtp && otp.join("").length !== 6)
                         }
                       >
                         {loading
